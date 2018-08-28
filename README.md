@@ -14,8 +14,8 @@ Secure RESTful services will include authentication, authorization, and encrypti
 
 ### User Story Template
 
-**As a** user, having PII, PHI, PCI, and other sensitive data
+**As a** ...
 
-**When** stored my data is stored
+**When** ...
 
-**Then** it must be encrypted
+**Then** ...
