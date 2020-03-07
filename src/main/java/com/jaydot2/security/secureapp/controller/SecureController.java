@@ -1,4 +1,4 @@
-package com.jaydot2.security.secureapp;
+package com.jaydot2.security.secureapp.controller;
 
 import io.swagger.annotations.ApiOperation;
 import org.springframework.web.bind.annotation.GetMapping;
