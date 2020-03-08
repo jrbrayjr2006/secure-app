@@ -1,4 +1,4 @@
-package com.jaydot2.security.secureapp;
+package com.jaydot2.security.secureapp.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

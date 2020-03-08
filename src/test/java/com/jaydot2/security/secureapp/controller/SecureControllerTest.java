@@ -5,6 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.http.MediaType;
+import org.springframework.mock.web.MockHttpServletResponse;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
@@ -30,5 +31,19 @@ class SecureControllerTest {
 
         // When
         mockMvc.perform(get(endpoint).contentType(MediaType.APPLICATION_JSON)).andExpect(status().isOk());
+    }
+
+    @Test
+    @DisplayName("Given a name, when a request is made, should return status ok and person")
+    void shouldReturnPersonInResponse() throws Exception {
+        // Given
+        String endpoint = "/person";
+        String somename = "John";
+
+        // When
+        MockHttpServletResponse mockResponse = mockMvc.perform(get(endpoint).contentType(MediaType.APPLICATION_JSON).content(somename))
+                .andExpect(status().isOk())
+                .andReturn().getResponse();
+
     }
 }

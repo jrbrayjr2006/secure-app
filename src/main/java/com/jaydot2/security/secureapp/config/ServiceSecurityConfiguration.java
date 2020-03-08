@@ -1,4 +1,4 @@
-package com.jaydot2.security.secureapp;
+package com.jaydot2.security.secureapp.config;
 
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;

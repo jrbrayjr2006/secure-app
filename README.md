@@ -13,9 +13,10 @@ Secure RESTful services will include authentication, authorization, and encrypti
 
 ## References
 
-1. [Swagger](https://swagger.io/)
-2. [Setting Up Swagger 2 with a Spring REST API](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api)
-3. [Springfox Reference Documentation](http://springfox.github.io/springfox/docs/current/)
+1. [Spring Security oAuth](https://projects.spring.io/spring-security-oauth/docs/Home.html)
+2. [Swagger](https://swagger.io/)
+3. [Setting Up Swagger 2 with a Spring REST API](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api)
+4. [Springfox Reference Documentation](http://springfox.github.io/springfox/docs/current/)
 
 ### User Story Template
 
