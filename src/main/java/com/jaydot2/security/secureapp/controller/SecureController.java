@@ -23,6 +23,12 @@ public class SecureController {
         return data;
     }
 
+    @ApiOperation( value = "/login" )
+    @GetMapping( value = "/login" )
+    public ResponseEntity<String> login() {
+        return ResponseEntity.ok("You must login to access this reaource!");
+    }
+
     @ApiOperation( value = "/person" )
     @GetMapping( value = "/person", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE )
     public ResponseEntity<Person> person(@RequestBody String firstname) {
