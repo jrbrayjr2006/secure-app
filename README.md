@@ -22,6 +22,11 @@ The configuration class `ServiceSecurityCoinfiguration` is setup to allow anonym
 
 The `/person` endpoint is secured and cannot be accessed by an unauthenticated user.
 
+### Validation
+
+This application uses some validation logic to protect against some of the following types of attacks:
+- Server-Side Request Forgery (SSRF) attack
+
 ## References
 
 1. [Spring Security oAuth](https://projects.spring.io/spring-security-oauth/docs/Home.html)
