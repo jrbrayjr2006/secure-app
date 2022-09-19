@@ -19,8 +19,8 @@ jobs:
                 type: docker-image
                 source:
                   repository: localhost:8081/java
-                  username: jaydot2llc
-                  password: voyager2
+                  username: ((nexus-username))
+                  password: ((nexus_password))
               inputs:
                 - name: secure-app-git
               caches:
