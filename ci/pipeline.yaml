@@ -7,6 +7,14 @@ resources:
       branch: master
       skip_ssl_verification: true
 
+  - name: snapshot
+    type: maven
+    source:
+      url: http://localhost:8081/repository/snapshots/
+      artifact: com.jaydot2.security:secure-app:jar
+      username: ((nexus-username))
+      password: ((nexus-password))
+
 jobs:
   - name: unit-test
     plan:
@@ -29,3 +37,6 @@ jobs:
                 - name: artifacts
               run:
                 path: secure-app-git/ci/scripts/run-unit-tests.sh
+      - put: snapshot
+        params:
+          file: artifacts/*SNAPSHOT.jar
