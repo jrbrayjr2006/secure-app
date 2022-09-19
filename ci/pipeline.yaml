@@ -1,0 +1,31 @@
+---
+resources:
+  - name: secure-app-git
+    type: git
+    source:
+      uri: git@github.com:jrbrayjr2006/secure-app.git
+      branch: master
+      skip_ssl_verification: true
+
+jobs:
+  - name: unit-test
+    plan:
+      - get: secure-app-git
+      - do:
+          - task: unit-test
+            config:
+              platform: linux
+              image_resource:
+                type: docker-image
+                source:
+                  repository: localhost:8081/java
+                  username: jaydot2llc
+                  password: voyager2
+              inputs:
+                - name: secure-app-git
+              caches:
+                - path: ../.gradle/
+              outputs:
+                - name: artifacts
+              run:
+                path: secure-app-git/ci/scripts/run-unit-tests.sh
