@@ -35,6 +35,7 @@ This application uses some validation logic to protect against some of the follo
 4. [Setting Up Swagger 2 with a Spring REST API](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api)
 5. [Springfox Reference Documentation](http://springfox.github.io/springfox/docs/current/)
 6. [Spring Security Reference](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#test)
+7. [Spring Boot Testing Signed JWT with a mock Authorization Server](https://chancharles.medium.com/spring-boot-testing-signed-jwt-with-a-mock-authorization-server-f2907ec07175)
 
 ### User Story Template
 
