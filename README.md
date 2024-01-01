@@ -32,6 +32,11 @@ This application uses some validation logic to protect against some of the follo
 The Swagger/Open API dependency has been updated to use:
 
 ```groovy
+implementation 'org.springdoc:springdoc-openapi-starter-webmvc-ui:2.3.0'
+```
+
+An alternative to the above dependency is shown below.
+```groovy
 // https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-jaxrs2-jakarta
 implementation group: 'io.swagger.core.v3', name: 'swagger-jaxrs2-jakarta', version: '2.2.20'
 ```
@@ -49,7 +54,7 @@ WireMock is used as part of the integration testing dependencies.
 1. [Spring Security oAuth](https://projects.spring.io/spring-security-oauth/docs/Home.html)
 2. [Simple Single Sign-On with Spring Security OAuth2](https://www.baeldung.com/sso-spring-security-oauth2)
 3. [Swagger](https://swagger.io/)
-4. [Setting Up Swagger 2 with a Spring REST API](https://www.baeldung.com/swagger-2-documentation-for-spring-rest-api)
+4. [Using Swagger 3 in Spring Boot 3](https://medium.com/@f.s.a.kuzman/using-swagger-3-in-spring-boot-3-c11a483ea6dc)
 5. [Springfox Reference Documentation](http://springfox.github.io/springfox/docs/current/)
 6. [Spring Security Reference](https://docs.spring.io/spring-security/site/docs/current/reference/html5/#test)
 7. [Spring Boot Testing Signed JWT with a mock Authorization Server](https://chancharles.medium.com/spring-boot-testing-signed-jwt-with-a-mock-authorization-server-f2907ec07175)
