@@ -27,6 +27,23 @@ The `/person` endpoint is secured and cannot be accessed by an unauthenticated u
 This application uses some validation logic to protect against some of the following types of attacks:
 - Server-Side Request Forgery (SSRF) attack
 
+### API Documentation
+
+The Swagger/Open API dependency has been updated to use:
+
+```groovy
+// https://mvnrepository.com/artifact/io.swagger.core.v3/swagger-jaxrs2-jakarta
+implementation group: 'io.swagger.core.v3', name: 'swagger-jaxrs2-jakarta', version: '2.2.20'
+```
+
+This version of Swagger is compatable with the Jakarta libraries and does not use the older `javax` libraries.
+
+## Testing
+
+### Integration Testing
+
+WireMock is used as part of the integration testing dependencies.
+
 ## References
 
 1. [Spring Security oAuth](https://projects.spring.io/spring-security-oauth/docs/Home.html)

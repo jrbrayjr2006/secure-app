@@ -1,7 +1,7 @@
 package com.jaydot2.security.secureapp.controller;
 
 import com.jaydot2.security.secureapp.model.Person;
-import io.swagger.annotations.ApiOperation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -14,7 +14,6 @@ import java.util.Map;
 @RestController
 public class SecureController {
 
-    @ApiOperation( value = "")
     @GetMapping(value = "/")
     public Map<String, String> home() {
         Map<String, String> data = new HashMap<>();
@@ -22,13 +21,12 @@ public class SecureController {
         return data;
     }
 
-    @ApiOperation( value = "/login" )
+    @Tag(name = "Login", description = "Basic login api")
     @GetMapping( value = "/login" )
     public ResponseEntity<String> login() {
         return ResponseEntity.ok("You must login to access this reaource!");
     }
 
-    @ApiOperation( value = "/person" )
     @GetMapping( value = "/person", produces = MediaType.APPLICATION_JSON_VALUE, consumes = MediaType.APPLICATION_JSON_VALUE )
     public ResponseEntity<Person> person(@RequestBody String firstname) {
         Person person = new Person();
